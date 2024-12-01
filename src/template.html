@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin-form</title>
+  </head>
+  <body>
+    <aside>
+      <div class="title-container">
+        <h1 class="main-title">Odin form .</h1>
+      </div>
+      <div class="img-container"></div>
+    </aside>
+    <main>
+      <div class="form-container">
+        <h1 class="main-title-form">Create <br />an account</h1>
+        <form>
+          <label class="label-form" for="femail">email :</label><br />
+          <input type="email" id="femail" name="femail" />
+          <br />
+          <div class="country-container">
+            <div class="country-name-container">
+              <label class="label-form" for="fcountry">Country :</label><br />
+              <input list="country-name" id="fcountry" name="fcountry" />
+              <datalist id="country-name"> </datalist>
+            </div>
+            <div class="country-code-container">
+              <label class="label-form" for="fcountry-code">ZIP code :</label
+              ><br />
+              <input
+                list="country-code"
+                id="fcountry-code"
+                name="fcountry-code"
+              />
+              <datalist id="country-code"> </datalist>
+            </div>
+          </div>
+          <div class="password-container">
+            <div class="password-input">
+              <div class="first-password">
+                <label class="label-form" for="pwd">Password:</label><br />
+                <input
+                  type="password"
+                  id="pwd"
+                  name="pwd"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$"
+                />
+              </div>
+              <div class="second-password">
+                <label class="label-form" for="pwd-confirmation"
+                  >Confirmation:</label
+                ><br />
+                <input
+                  type="password"
+                  id="pwd-confirmation"
+                  name="pwd-confirmation"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$"
+                />
+              </div>
+            </div>
+            <div class="password-check">
+              <h3 class="pwd-condition">Your password must have :</h3>
+              <div class="condition-container">
+                <div id="8-characters" class="icon-container"></div>
+                <div class="condition-text">At least 8 characters long.</div>
+              </div>
+              <div class="condition-container">
+                <div id="uppercase" class="icon-container"></div>
+                <div class="condition-text">Contains uppercase letters.</div>
+              </div>
+              <div class="condition-container">
+                <div id="lowercase" class="icon-container"></div>
+                <div class="condition-text">Contains lowercase letters.</div>
+              </div>
+              <div class="condition-container">
+                <div id="number" class="icon-container"></div>
+                <div class="condition-text">Contains numbers.</div>
+              </div>
+              <div class="condition-container">
+                <div id="punctuation" class="icon-container"></div>
+                <div class="condition-text">Contains punctuation.</div>
+              </div>
+              <div class="condition-container">
+                <div id="pwd-check" class="icon-container"></div>
+                <div class="condition-text">Should have the same password.</div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
